@@ -13,5 +13,5 @@ public class ModMenuTypes {
             DeferredRegister.create(ForgeRegistries.MENU_TYPES, ClipBoardMod.MODID);
 
     public static final RegistryObject<MenuType<ClipboardMenu>> CLIPBOARD_MENU =
-            MENUS.register("clipboard", () -> IForgeMenuType.create(ClipboardMenu::new));
+            MENUS.register("clipboard", () -> new MenuType<>(ClipboardMenu::new));
 }

@@ -3,6 +3,7 @@ package com.lapis.clipboard;
 import com.lapis.clipboard.block.ModBlockEntities;
 import com.lapis.clipboard.block.ModBlocks;
 import com.lapis.clipboard.item.ModItems;
+import com.lapis.clipboard.menu.ModMenuTypes;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -16,6 +17,8 @@ public class ClipBoardMod {
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModBlocks.BLOCK_ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+        ModMenuTypes.MENUS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         // Регистрируем обработчик для добавления в креативные вкладки
         FMLJavaModLoadingContext.get()

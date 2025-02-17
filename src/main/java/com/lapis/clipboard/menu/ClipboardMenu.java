@@ -1,6 +1,7 @@
 // ClipboardMenu.java
 package com.lapis.clipboard.menu;
 
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -14,8 +15,17 @@ public class ClipboardMenu extends AbstractContainerMenu {
         this.clipboardStack = stack;
     }
 
+    public ItemStack getClipboardStack() {
+        return clipboardStack;
+    }
+
+    // Конструктор для клиента (через FriendlyByteBuf)
+    public ClipboardMenu(int id, Inventory inv, FriendlyByteBuf data) {
+        this(id, inv, data.readItem());
+    }
+
     @Override
-    public ItemStack quickMoveStack(Player player, int i) {
+    public ItemStack quickMoveStack(Player p_38941_, int p_38942_) {
         return null;
     }
 

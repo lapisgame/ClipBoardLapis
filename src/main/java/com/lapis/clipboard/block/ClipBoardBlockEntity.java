@@ -8,7 +8,7 @@ public class ClipBoardBlockEntity extends BlockEntity {
     private String text = "";
 
     public ClipBoardBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.CLIPBOARD.get(), pos, state); // Используем ModBlockEntities.CLIPBOARD
+        super(ModBlockEntities.CLIPBOARD.get(), pos, state); // Used ModBlockEntities.CLIPBOARD
     }
 
     public void setText(String text) {
