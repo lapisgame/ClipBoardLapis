@@ -1,0 +1,11 @@
+modLoader="javafml"
+loaderVersion="[47,)" # Версия Forge для Minecraft 1.20.1
+license="All rights reserved"
+[[mods]]
+modId="clipboard" # ID мода
+version="${file.jarVersion}"
+displayName="ClipBoard" # Название мода
+authors="Lapis" # Разработчик
+description='''
+A mod that adds clipboard functionality to Minecraft.
+'''
